@@ -3,6 +3,9 @@
 # Script sets its own options and restores caller options on exit
 setopt localoptions extendedglob pipefail warnnestedvar nullglob
 
+# Source .profile for IA_USER/IA_PASS variables
+[[ -f ~/.profile ]] && source ~/.profile
+
 # Initialise all readonly global variables
 init_static_globals () {
     typeset -gr ROMWEASEL_VERSION="MiSTer ROMweasel v0.9.13"
@@ -70,9 +73,9 @@ init_static_globals () {
     typeset -gr GB_URL="https://archive.org/download/nointro.gb"
     typeset -gr GB_FILES_XML="nointro.gb_files.xml"
     typeset -gr GB_META_XML="nointro.gb_meta.xml"
-    typeset -gr GBC_URL="https://archive.org/download/nointro.gbc"
-    typeset -gr GBC_FILES_XML="nointro.gbc_files.xml"
-    typeset -gr GBC_META_XML="nointro.gbc_meta.xml"
+    typeset -gr GBC_URL="https://archive.org/download/nointro.gbc-1"
+    typeset -gr GBC_FILES_XML="nointro.gbc-1_files.xml"
+    typeset -gr GBC_META_XML="nointro.gbc-1_meta.xml"
     typeset -gr GBA_URL="https://archive.org/download/nointro.gba"
     typeset -gr GBA_FILES_XML="nointro.gba_files.xml"
     typeset -gr GBA_META_XML="nointro.gba_meta.xml"
